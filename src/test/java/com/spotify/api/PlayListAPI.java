@@ -12,15 +12,13 @@ public class PlayListAPI {
 		
 		return given(SpecBuilders.reqSpec())
 				
-//				.header("Authorization", "Bearer "+token)
-				
-				.auth().oauth2(token)
+				.header("Authorization", "Bearer "+token)
 
 				.body(requestPlaylist)
 
 				.when()
 
-				.post("/users/31q36j7z4gu5fg2mawtfmlskhp74/playlists")
+				.post("/users/312ay5mt3ghqbpjyyp4yqnifrnte/playlists")
 
 				.then()
 
@@ -36,9 +34,8 @@ public class PlayListAPI {
 	{
 		return given(SpecBuilders.reqSpec())
 		 
-//		.header("Authorization", "Bearer "+token)
+		.header("Authorization", "Bearer "+token)
 				
-		 .auth().oauth2(token)
 		 .when()
 		 
 		 .get("/playlists/"+playlistId)
@@ -58,9 +55,7 @@ public class PlayListAPI {
 	{
 		return given(SpecBuilders.reqSpec())
 			
-//				.header("Authorization", "Bearer "+token)
-				
-				.auth().oauth2(token)
+				.header("Authorization", "Bearer "+token)
 				
 				.body(requestPlaylist)
 				
